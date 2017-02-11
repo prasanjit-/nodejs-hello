@@ -1,6 +1,6 @@
 #!/bin/bash
 ### build.sh
-
+echo Running script as user - `whoami`
 if [ -z "${1}" ]; then
    version="latest"
 else
