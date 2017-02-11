@@ -1,0 +1,15 @@
+{
+    "id": "app", 
+    "container": {
+      "docker": {
+        "image": "mesos-dev.inframetic.com:5000/nodejs-hello:latest",
+        "network": "BRIDGE",
+        "portMappings": [
+          {"containerPort": 8000, "servicePort": 8000}
+        ]
+      }
+    },
+    "cpus": 0.2,
+    "mem": 512.0,
+    "instances": 1
+}
