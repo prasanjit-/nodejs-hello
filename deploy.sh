@@ -10,9 +10,10 @@ fi
 
 # destroy old application
 curl -X DELETE -H "Content-Type: application/json" http://${marathon}:8080/v2/apps/nodejs-hello
+ssh -t centos@mesos-dev.inframetic.com "sudo su - root -c 'bash /root/devops/scripts/clean_docker' "
 
 # I know this one is ugly. But it works for now.
-sleep 3
+sleep 6
 
 # these lines will create a copy of app_marathon.json and update the image version
 cp -f app_marathon.json app_marathon.json.tmp
