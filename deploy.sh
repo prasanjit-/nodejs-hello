@@ -5,11 +5,11 @@ if [ -z "${1}" ]; then
    marathon="mesos-dev.inframetic.com"
 else
    version="${1}"
-   marathon=http://mesos-dev.inframetic.com
+   marathon=mesos-dev.inframetic.com
 fi
 
 # destroy old application
-curl -X DELETE -H "Content-Type: application/json" http://${marathon}:8080/v2/apps/app 
+curl -X DELETE -H "Content-Type: application/json" http://${marathon}:8080/v2/apps/nodejs-hello
 
 # I know this one is ugly. But it works for now.
 sleep 3
