@@ -5,7 +5,7 @@
         "image": "mesos-dev.inframetic.com:5000/nodejs-hello:latest",
         "network": "BRIDGE",
         "portMappings": [
-          {"containerPort": 8000, "hostPort": 8000}
+          {"containerPort": 8000, "servicePort": 8000}
         ]
       }
     },
