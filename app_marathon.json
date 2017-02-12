@@ -3,7 +3,7 @@
     "container": {
       "docker": {
         "image": "mesos-dev.inframetic.com:5000/nodejs-hello:latest",
-        "network": "BRIDGE",
+        "network": "HOST",
         "portMappings": [
           {"containerPort": 8000, "servicePort": 8000, "hostPort":8000}
         ]
